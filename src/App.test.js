@@ -1,8 +1,11 @@
 import { render, screen } from '@testing-library/react';
-import App from './App';
+import CalculatorLayout from '../src/components/organisms/CalculatorLayout';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+
+test('displays 0 initially', async () => {
+  render(<CalculatorLayout />);
+  const displayElement = await screen.findByTestId("display");
+  expect(displayElement).toHaveTextContent("0");
 });
+
+

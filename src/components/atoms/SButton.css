@@ -1,0 +1,23 @@
+.sbutton {
+  width: 100px; /* Set a fixed width or use auto */
+  height: 40px; /* Standard button height */
+  font-size: 1rem; /* Adjust font size for readability */
+  /*font-weight: bold; /* Make text more visible */
+  text-transform: uppercase; /* Optional: Capitalize text */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Slightly rounded edges */
+  background-color: #777; /* Default background */
+  color: white; /* Text color */
+  cursor: pointer; /* Indicate interactivity */
+  transition: background-color 0.3s ease, transform 0.1s ease; /* Smooth transition */
+}
+  
+  .sbutton:hover {
+    background-color: #888;
+  }
+
+  button.sbutton {
+    margin-bottom: 20px;
+  }
+  
+  

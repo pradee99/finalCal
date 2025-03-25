@@ -1,11 +1,11 @@
 import React from 'react';
-import Button from '../atoms/Button';
-import ButtonGroup from '../atoms/ButtonGroup';
+import Button from '../atoms/Button/Button';
+import ButtonGroup from '../atoms/buttongroup/ButtonGroup';
 
 const ScientificKeypad = ({ onClick }) => {
   const buttons = [
-    'sin', 'cos', 'tan', '(', ')', '√', '7', '8', '9', '/', '4', '5', '6', '*',
-    '1', '2', '3', '-', '0', '.', '=', '+', 'C'
+    'sin', 'cos', 'tan', '√','(', ')','.','+', '7', '8', '9', '/', '4', '5', '6', '*',
+    '1', '2', '3', '-', '0',  '=',  'C'
   ];
 
   return (

@@ -1,18 +1,19 @@
 import React, { useState } from 'react';
-import Display from '../atoms/Display';
+import Display from '../atoms/display/Display';
 import SimpleKeypad from '../molecules/SimpleKeypad';
 import ScientificKeypad from '../molecules/ScientificKeypad';
 import SButton from '../atoms/SButton';
+import { calculateResult } from '../../utils/CalculatorUtils'; 
 
 const CalculatorLayout = () => {
   const [input, setInput] = useState('');
   const [result, setResult] = useState('');
-  const [isScientific, setIsScientific] = useState(false); // State to track the mode
+  const [isScientific, setIsScientific] = useState(false);
 
   const handleButtonClick = (label) => {
     if (label === '=') {
       try {
-        const calculationResult = eval(input).toString();  // Evaluating the input expression
+        const calculationResult = calculateResult(input); // Use the external calculateResult function
         setResult(calculationResult);
         setInput('');
       } catch (error) {
@@ -28,14 +29,18 @@ const CalculatorLayout = () => {
   };
 
   const toggleMode = () => {
-    setIsScientific((prevMode) => !prevMode); // Toggle between simple and scientific modes
+    setIsScientific((prevMode) => !prevMode);
   };
 
   return (
     <div className="calculator">
-      <Display value={input || result || '0'} />
+      <Display value={input || result || '0'} data-testid="display" />
       <div className="button-group">
-        <SButton label={isScientific ? 'Simple' : 'Scientific'} onClick={toggleMode} />
+        {/* Move the button inside CalculatorLayout to toggle mode */}
+        <SButton 
+          label={isScientific ? 'Simple' : 'Scientific'} 
+          onClick={toggleMode} 
+        />
       </div>
       {isScientific ? (
         <ScientificKeypad onClick={handleButtonClick} />
@@ -47,4 +52,3 @@ const CalculatorLayout = () => {
 };
 
 export default CalculatorLayout;
-

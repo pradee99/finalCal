@@ -1,4 +1,6 @@
 import React from 'react';
+import './SButton.css';  // Ensure this file exists
+
 
 const SButton = ({ label, onClick }) => {
   return (

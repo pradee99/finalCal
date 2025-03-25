@@ -18,7 +18,7 @@ body {
     text-align: center;
   }
   
-  button {
+ /* button {
     width: 100%;
     height: 50px;
     font-size: 1.5rem;
@@ -44,10 +44,10 @@ body {
   
   .sbutton:hover {
     background-color: #888;
-  }
+  }*/
   
   /* Adjust the display area */
-  .display {
+ /* .display {
     width: 100%;
     height: 60px;
     background-color: #222;
@@ -58,27 +58,27 @@ body {
     text-align: right;
     border-radius: 5px;
     box-sizing: border-box;
-  }
+  }*/
   
   /* Style for button group */
-  .button-group {
+  /*.button-group {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
     margin-bottom: 20px;
-  }
+  }*/
   
   /* Button for Switch Mode */
-  button.sbutton {
+ /* button.sbutton {
     margin-bottom: 20px;
-  }
+  }*/
   
   /* Additional style for button grid layout */
-  .button-group {
+  /*.button-group {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
-  }
+  }*/
   
   /* Simple keypads */
   .simple-keypad button {
